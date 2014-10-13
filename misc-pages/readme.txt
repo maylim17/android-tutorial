@@ -6,7 +6,7 @@ Download    : https://creativemarket.com/anujkk
 Version	    : 1.0
 Uses        : Bootstrap Version 3.0 / jQuery Version 2.0.3
 Browser     : Tested on latest versions of Firefox, Chrome, Safari, Opera, IE
-Designer    : Anuj Kumar
+Designer    : Makers' Lab
 Contact     : anuj.kk@gmail.com
 ****************************************************************************************
 
