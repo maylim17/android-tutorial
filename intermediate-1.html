@@ -15,6 +15,15 @@
 		<link href="./includes/js/bxslider/jquery.bxslider.css" rel="stylesheet">
 		<link href="./includes/themes/default/style.css" rel="stylesheet">
 
+		<script>
+
+			function showAnswers () {
+				document.getElementById("answer-1").innerHTML = 'Declare a variable named school, with type String, and assign it a value of "NTU"<br><i>String school = "NTU";</i>'
+				document.getElementById("answer-2").innerHTML = 'Declare an int variable named numStudents, and assign it a value of 12000<br><i>int numStudents = 12000;</i>';
+				document.getElementById("answer-3").innerHTML = "Declare a method named announceResults, with return type void, and a String input argument <br><i>public void announceResults (String resultMessage) { }";
+			}
+
+		</script>
 	</head>
 	<body>
 
@@ -71,42 +80,24 @@
 				<p>Variable assignment statement (assumed variableName already declared): <br><b>variableName = assigned_value;</b><p>
 				<p>Variable declaration & assignment in 1 statement: <br><b>data_type variableName = assigned_value;</b></p>
 				<br>
-				<p>Method/Function declaration block: <br><b></b>public return-type methodName (input-arguments) { //implement }</b></p>
+				<p>Method/function declaration block: <br><b>public return-type methodName (input_type inputName) {   }</b></p>
+				<br>
+				<p>Comments at any point in code: <br><b>//</b> this is a comment statement</p>
 			
 				<div class="col-sm-4">
 
 					<div class="form-group">
-						<label id="answer-1">Declare</label>
+						<label id="answer-1">Declare a variable named school, with type String, and assign it a value of "NTU"</label>
 						<input name="name" class="form-control" value="" id="name" required="" type="text" placeholder="">
 					</div>
 
 					<div class="form-group">
-						<label id="answer-2">"Makers Lab"</label>
+						<label id="answer-2">Declare an int variable named numStudents, and assign it a value of 12000</label>
 						<input name="name" class="form-control" value="" id="name" required="" type="text" placeholder="">
 					</div>
 
 					<div class="form-group">
-						<label id="answer-3">72</label>
-						<input name="name" class="form-control" value="" id="name" required="" type="text" placeholder="">
-					</div>
-
-					<div class="form-group">
-						<label id="answer-4">false</label>
-						<input name="name" class="form-control" value="" id="name" required="" type="text" placeholder="">
-					</div>
-
-					<div class="form-group">
-						<label id="answer-5">"a"</label>
-						<input name="name" class="form-control" value="" id="name" required="" type="text" placeholder="">
-					</div>
-
-					<div class="form-group">
-						<label id="answer-6">1.289</label>
-						<input name="name" class="form-control" value="" id="name" required="" type="text" placeholder="">
-					</div>
-
-					<div class="form-group">
-						<label id="answer-7">""</label>
+						<label id="answer-3">Declare a method named announceResults, with return type void, and a String input argument</label>
 						<input name="name" class="form-control" value="" id="name" required="" type="text" placeholder="">
 					</div>
 
