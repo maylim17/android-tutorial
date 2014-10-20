@@ -15,6 +15,16 @@
 		<link href="./includes/js/bxslider/jquery.bxslider.css" rel="stylesheet">
 		<link href="./includes/themes/default/style.css" rel="stylesheet">
 
+		<script>
+
+			function showAnswers () {
+				document.getElementById("answer-1").innerHTML = 'Which line executes if userSelect == 10?<br><font color="blue">line 8</font>';
+				document.getElementById("answer-2").innerHTML = 'How many times does line 2 execute for?<br><font color="blue">5 times</font>';
+				document.getElementById("answer-3").innerHTML = 'How many times does line 4 execute for?<br><font color="blue">8 times</font>';
+			}
+
+		</script>
+
 	</head>
 	<body>
 
@@ -40,11 +50,22 @@
 					<li class="submenu-section"></i>Advanced</li>
 					<li class="submenu-item"><a href="advanced-1.html">Java Classes</a></li>
 					<li class="submenu-item"><a href="advanced-2.html">Objects</a></li>
-					<li class="submenu-item"><a href="advanced-3.html">Activities</a></li>
+					<!-- <li class="submenu-item"><a href="advanced-3.html">Activities</a></li> -->
+				</ul>
+			</li>
+			<li>
+				<a class="flyout" href="#"><i class="icon-code icon-2x"></i><br/>Code App <i class="icon-caret-right"></i></a>
+				<ul class="submenu">
+					<li class="submenu-section"></i>Fun Facts App</li>
+					<li class="submenu-item"><a href="code-funfacts-1.html">Create Project in IDE</a></li>
+					<li class="submenu-item"><a href="code-funfacts-2.html">Create XML Layout</a></li>
+					<li class="submenu-item"><a href="code-funfacts-3.html">Implement Java Logic</a></li>
+					<li class="submenu-item"><a href="code-funfacts-4.html">Improve Code with OOP</a></li>
 				</ul>
 			</li>
 			<li><a href="cheatsheet.html"><i class="icon-book icon-2x"></i><br/>Cheat Sheet</a></li>
-			<li><a href="glossary.html"><i class="icon-question icon-2x"></i><br/>Glossary</a></li><br>
+			<!-- <li><a href="glossary.html"><i class="icon-question icon-2x"></i><br/>Glossary</a></li> -->
+			<br>
 			<li><a href="finish.html"><i class="icon-trophy icon-2x"></i><br/>Finished Apps!</a></li>
 	    </ul>
 
@@ -66,12 +87,63 @@
 			<!-- CONTENT BODY STARTS HERE-->
 
 			<div class="container">
-				<br>
-				<p></p>
-				<p><p><br>
-
 				<div class="col-sm-4">
+					<br>
+					<p>
+						<font color="grey">1|</font>&nbsp;&nbsp;&nbsp;<b>if</b> (userSelect == 1) { <br>
+						<font color="grey">2|</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;machine.dispense("Tuna"); <br>
+						<font color="grey">3|</font>&nbsp;&nbsp;&nbsp;} <br>
+						<font color="grey">4|</font>&nbsp;&nbsp;&nbsp;<b>else if</b> (userSelect == 2) { <br>
+						<font color="grey">5|</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;machine.dispense("Cheese"); <br>
+						<font color="grey">6|</font>&nbsp;&nbsp;&nbsp;} <br>
+						<font color="grey">7|</font>&nbsp;&nbsp;&nbsp;<b>else</b> { <br>
+						<font color="grey">8|</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;machine.dispense("Ham"); <br>
+						<font color="grey">9|</font>&nbsp;&nbsp;&nbsp;} <br>
+					</p>
+					<br>
 
+					<div class="form-group">
+						<label id="answer-1">Which line executes if userSelect == 10?</label>
+						<input name="name" class="form-control" value="" id="name" required="" type="text" placeholder="">
+					</div>
+
+					<br><br>
+					<p>
+						<font color="grey">Syntax > <b>for</b> (a; b; c) { }</font><br>
+						<font color="grey">&nbsp;&nbsp;&nbsp;a- initialize counter</font><br>
+						<font color="grey">&nbsp;&nbsp;&nbsp;b- condition check at each loop start</font><br>
+						<font color="grey">&nbsp;&nbsp;&nbsp;c- post-operation at each loop end</font><br>
+						<br>
+						<font color="grey">1|</font>&nbsp;&nbsp;&nbsp;<b>for</b> (i = 0; i < 5; i++) { <br>
+						<font color="grey">2|</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;machine.dispenseCoin(0.5); <br>
+						<font color="grey">3|</font>&nbsp;&nbsp;&nbsp;} <br>
+					</p>
+					<br>
+
+					<div class="form-group">
+						<label id="answer-2">How many times does line 2 execute for?</label>
+						<input name="name" class="form-control" value="" id="name" required="" type="text" placeholder="">
+					</div>
+
+					<br><br>
+					<p>
+						<font color="grey">Syntax > <b>while</b> (a) { }</font><br>
+						<font color="grey">&nbsp;&nbsp;&nbsp;a- condition check at each loop start</font><br>
+						<br>
+						<font color="grey">1|</font>&nbsp;&nbsp;&nbsp;int counter = 1; <br>
+						<font color="grey">2|</font>&nbsp;&nbsp;&nbsp;<br>
+						<font color="grey">3|</font>&nbsp;&nbsp;&nbsp;<b>while</b> (counter <= 8) { <br>
+						<font color="grey">4|</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;machine.dispenseCoin(0.1); <br>
+						<font color="grey">5|</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;counter = counter + 1; <br>
+						<font color="grey">6|</font>&nbsp;&nbsp;&nbsp;} <br>
+					</p>
+					<br>
+
+					<div class="form-group">
+						<label id="answer-3">How many times does line 4 execute for?</label>
+						<input name="name" class="form-control" value="" id="name" required="" type="text" placeholder="">
+					</div>
+					<br>
 					<br>
 					<div>
 						<button class="btn btn-main btn-large" id="button" onclick="showAnswers()">Show Answers</button><br><br><br>

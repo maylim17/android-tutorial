@@ -15,6 +15,14 @@
 		<link href="./includes/js/bxslider/jquery.bxslider.css" rel="stylesheet">
 		<link href="./includes/themes/default/style.css" rel="stylesheet">
 
+		<script>
+
+			function showAnswers () {
+				document.getElementById("answer-1").innerHTML = '<font color="blue"><br>&nbsp;&nbsp;1|&nbsp;&nbsp;&nbsp;public class Dictionary { <br> &nbsp;&nbsp;2|<br>&nbsp;&nbsp;3|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int paperWeight = 2;<br>&nbsp;&nbsp;4|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int coverWeight = 1;<br>&nbsp;&nbsp;5|<br>&nbsp;&nbsp;6|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int getTotalWeight () {<br>&nbsp;&nbsp;7|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int total = paperWeight + coverWeight;<br>&nbsp;&nbsp;8|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return total;<br>&nbsp;&nbsp;9|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>10|&nbsp;&nbsp;&nbsp;}<br><br></font>';
+			}
+
+		</script>
+
 	</head>
 	<body>
 
@@ -40,11 +48,22 @@
 					<li class="submenu-section"></i>Advanced</li>
 					<li class="submenu-item"><a href="advanced-1.html">Java Classes</a></li>
 					<li class="submenu-item"><a href="advanced-2.html">Objects</a></li>
-					<li class="submenu-item"><a href="advanced-3.html">Activities</a></li>
+					<!-- <li class="submenu-item"><a href="advanced-3.html">Activities</a></li> -->
+				</ul>
+			</li>
+			<li>
+				<a class="flyout" href="#"><i class="icon-code icon-2x"></i><br/>Code App <i class="icon-caret-right"></i></a>
+				<ul class="submenu">
+					<li class="submenu-section"></i>Fun Facts App</li>
+					<li class="submenu-item"><a href="code-funfacts-1.html">Create Project in IDE</a></li>
+					<li class="submenu-item"><a href="code-funfacts-2.html">Create XML Layout</a></li>
+					<li class="submenu-item"><a href="code-funfacts-3.html">Implement Java Logic</a></li>
+					<li class="submenu-item"><a href="code-funfacts-4.html">Improve Code with OOP</a></li>
 				</ul>
 			</li>
 			<li><a href="cheatsheet.html"><i class="icon-book icon-2x"></i><br/>Cheat Sheet</a></li>
-			<li><a href="glossary.html"><i class="icon-question icon-2x"></i><br/>Glossary</a></li><br>
+			<!-- <li><a href="glossary.html"><i class="icon-question icon-2x"></i><br/>Glossary</a></li> -->
+			<br>
 			<li><a href="finish.html"><i class="icon-trophy icon-2x"></i><br/>Finished Apps!</a></li>
 	    </ul>
 
@@ -66,13 +85,25 @@
 			<!-- CONTENT BODY STARTS HERE-->
 
 			<div class="container">
-				<br>
-				<p></p>
-				<p><p><br>
+				
+				<div class="col-sm-8">
+					<!-- <img src="./includes/img/array.png" style="width:500px;"><br><br> -->
+					<h3>Dictionary Class</h3><br>
+					&nbsp;&nbsp;&nbsp;<b>Variable(s):</b><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- paper weight: 2 <br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- cover weight: 1 <br><br>
+					&nbsp;&nbsp;&nbsp;<b>Method(s):</b><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- getTotalWeight(): sums both variable weights together and returns value
+					<br><br><br>
+					<div class="form-group">
+						<label>Implement <b>Dictionary.java</b> (the class <i>(blueprint)</i> for Dictionary objects):</label><br>
+						<textarea name="paragraph_text" cols="50" rows="10"></textarea>
+					</div>
 
-				<div class="col-sm-4">
+					<div class="form-group">
+						<label id="answer-1"></label>
+					</div>
 
-					<br>
 					<div>
 						<button class="btn btn-main btn-large" id="button" onclick="showAnswers()">Show Answers</button><br><br><br>
 						<button class="btn btn-main btn-large" onclick="location.href='advanced-2.html'">Next Step <i class="icon-caret-right"></i></button>
