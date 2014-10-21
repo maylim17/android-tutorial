@@ -15,15 +15,6 @@
 		<link href="./includes/js/bxslider/jquery.bxslider.css" rel="stylesheet">
 		<link href="./includes/themes/default/style.css" rel="stylesheet">
 
-		<script>
-
-			// function showAnswers () {
-			// 	document.getElementById("answer-1").innerHTML = 'Declare a variable named school, with type String, and assign it a value of "NTU"<br><i>Ans: String school = "NTU";</i>'
-			// 	document.getElementById("answer-2").innerHTML = 'Declare an int variable named numStudents, and assign it a value of 12000<br><i>Ans: int numStudents = 12000;</i>';
-			// 	document.getElementById("answer-3").innerHTML = "Declare a method named announceResults, with return type void, and a String input argument <br><i>Ans: public void announceResults (String resultMessage) { }";
-			// }
-
-		</script>
 	</head>
 	<body>
 
@@ -80,30 +71,49 @@
 
 			<div class="page-header">
 				<div class="container">
-					<h3>Fun Facts App > <b>Improve Code with OOP</b></h3>
+					<h3>Fun Facts App > <b>Additional Android Features</b></h3>
 				</div>			
 			</div>
-			
+		
 
 			<!-- CONTENT BODY STARTS HERE-->
-
-
 			<div class="container">
 				<br>
 				<div class="col-sm-8">
-					Let's use Java's OOP paradigm to better scale and organize our code.<br>We will be including a total of 12 different background colours and 10 fun facts in our app.
+					We will be exploring other new Android features here - displaying images, retrieving user input in the app, switching between activities (screens), and passing data between activities.
 					<br><br>
-					<h4>1. Create a new Java Class, <b>ColorWheel</b></h4>
-					This class will store all 12 background colors, and randomly select 1 color when its method is called
+					<h4>1. Create a new activity, <b>WelcomeActivity</b></h4>
+					Let's start with another blank activity template
 					<br>
-					<img src="./includes/img/app4-1a.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
-					<img src="./includes/img/app4-1b.png" style="width:300px; margin-top: 15px; border:1px solid #b7c0c7;">
+					<img src="./includes/img/app5-1a.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<img src="./includes/img/app5-1b.png" style="width:800px; margin-top: 15px; border:1px solid #b7c0c7;">
 					<br><br><br>
-					<h4>2. Declare and initialize an array variable to store the colors</h4>
-					Create a <i>container</i> to store and organize the 10 colors, as below
+					<h4>2. Edit the XML layout - to display image</h4>
+					Remove the default <b>textView</b> on the screen, and add an <b>ImageView</b>, and set src = "@drawable/welcome_img"
+					<img src="./includes/img/app5-2a.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<img src="./includes/img/app5-2b.png" style="width:300px; margin-top: 15px; border:1px solid #b7c0c7;">
+					<br><br><br>
+					<h4>3. Add the intended image into the project directory</h4>
+					Navigate to the folder that stores all app images, <b>drawable-______</b>. For this image, we will use the folder <b>drawable-hdpi</b>
+					<br>
+					<img src="./includes/img/app5-3a.png" style="width:400px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<img src="./includes/img/app5-3b.png" style="width:800px; margin-top: 15px; border:1px solid #b7c0c7;">
+					<br><br><br>
+					<h4>4. Edit the XML layout - place button</h4>
+					Add a button for user to navigate to the next activity (<b>FunFactsActivity</b>). Set button properties - id = "startButton", text = "Start Fun Facts!", textSize = "24sp", layout:width = "match_parent", background = "#ffffff"
+					<br>
+					<img src="./includes/img/app5-4.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<br><br><br>
+					<h4>5. Edit the XML layout - to retrieve user input</h4>
+					Add an input field for user to key in his or her name. Set id = "userName", text = "Enter your name", textSize = "24sp", gravity = "center", layout:width = "match_parent", layout:margin.bottom = "20dp", padding.all = "5sp"
+					<br>
+					<img src="./includes/img/app5-5.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<br><br><br>
+					<h4>6. Edit the XML layout - change background color</h4>
+					Change the background color to any of your choice, and you should obtain the final graphic below
 					<br><br>
 					<textarea  name="paragraph_text" cols="30" rows="10">
-	// the 12 hex color codes
+	// choose any of the 12 colors
 	"#39add1", // light blue
 	"#3079ab", // dark blue
 	"#c25975", // mauve
@@ -116,30 +126,45 @@
 	"#e0ab18", // mustard
 	"#637a91", // dark gray
 	"#f092b0", // pink</textarea>
-					<img src="./includes/img/app4-2.png" style="width:800px; margin-top: 15px; border:1px solid #b7c0c7;">
-					<br><br><br>
-					<h4>3. Program the method in <b>ColorWheel</b> class, <b>getColor()</b></h4>
-					This method selects and outputs a random color. Understand lines 23 - 39 and attempt to program it yourself
 					<br>
-					<img src="./includes/img/app4-3.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<img src="./includes/img/app5-6.png" style="width:800px; margin-top: 15px; border:1px solid #b7c0c7;">
 					<br><br><br>
-					<h4>4. Do the same for the second Java Class, <b>FactBook</b></h4>
-					This class will store all 10 fun facts, and randomly select 1 fun fact when its method is called. Understand lines 7 - 36 and attempt to program it yourself (go on, insert 10 fun facts about yourself!)
+					<h4>7. Implement Java logic - add buttonListener and retrieve user input</h4>
+					Again, delete the methods <b>onCreateOptionsMenu</b> and <b>onOptionsItemSelected</b>. Set onClickListener for <b>startButton</b> and implement the <b>onClick()</b> logic - to retrieve and store <b>userName</b> from the <b>editText</b> element. Understand lines 17 - 37 and attempt to program it yourself
 					<br>
-					<img src="./includes/img/app4-4.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<img src="./includes/img/app5-7.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
 					<br><br><br>
-					<h4>5. Edit <b>FunFactsActivity</b> to make use of both Classes</h4>
-					Understand lines 31 - 33, 38 and 43, and attempt to program it yourself
+					<h4>8. Implement Java logic - change screen activity and pass data over</h4>
+					Add additional logic into <b>startButton</b>'s onClick() method - to launch <b>FunFactsActivity</b> and pass <b>userName</b> data over. Understand lines 35 - 40 and attempt to program it yourself
 					<br>
-					<img src="./includes/img/app4-5.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<img src="./includes/img/app5-8.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<br><br><br>
+					<h4>9. Edit the Java logic in <b>FunFactsActivity</b> class</h4>
+					To retrieve the <b>userName</b> data passed over from previous activity, and display it on the current screen. Understand lines 20 - 30 and attempt to program it yourself
+					<br>
+					<img src="./includes/img/app5-9.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<br><br><br>
+					<h4>10. Configure app settings to launch app at <b>WelcomeActivity</b> screen</h4>
+					Navigate to and open file <b>AndroidManifest.xml</b>
+					<br>
+					<img src="./includes/img/app5-10a.png" style="width:300px; margin-top: 10px; border:1px solid #b7c0c7;">
 					<br><br>
+					The highlighted text in lines 13 - 17 (in the first image) decide which activity the app launches on. Move it down into <b>WelcomeActivity</b>'s block as seen in lines 17 - 21 (in the second image)
+					<br>
+					<img src="./includes/img/app5-10b.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<img src="./includes/img/app5-10c.png" style="width:800px; margin-top: 15px; border:1px solid #b7c0c7;">
+					<br><br><br>
+					<h4>11. Change app icon on device's home screen</h4>
+					<b>android:icon</b> in <b>AndroidManifest.xml</b> sets the image for the app's icon. Change its value to "@drawable/welcome_img.png"
+					<br>
+					<img src="./includes/img/app5-11.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<br><br><br>
 					Test run again with an Android device or an emulator.
-					<br><br><br><br>
-					Congratulations! You have completed the basic Android app tutorial :)
 					<br><br>
+					<!-- <br><br>
 					<div>
 						<button class="btn btn-main btn-large" onclick="location.href='cheatsheet.html'">Explore more Android features! <i class="icon-caret-right"></i></button>
-					</div>
+					</div> -->
 
 					<br><br>
 				</div>
@@ -152,7 +177,7 @@
 					<h4>Refer to or copy the following code if you encounter major bugs:</h4>
 					<br>
 
-					<b>ColorWheel.java</b>
+					<b>activity_welcome.xml</b>
 					<textarea  name="paragraph_text" cols="100" rows="20">
 	package nturep.funfacts;
 
@@ -198,7 +223,7 @@
 					</textarea>
 					<br><br><br>
 					
-					<b>FactBook.java</b>
+					<b>WelcomeActivity.java</b>
 					<textarea  name="paragraph_text" cols="100" rows="20">
 	package nturep.funfacts;
 
@@ -241,6 +266,48 @@
 					<br><br><br>
 					
 					<b>FunFactsActivity.java</b>
+					<textarea  name="paragraph_text" cols="100" rows="20">
+	package nturep.funfacts;
+
+	import java.util.Random;
+
+	public class FactBook {
+
+	    // array variable to store all 10 fun facts
+	    String[] mFacts = {
+	            "I used to have a dog and a cat living together.",
+	            "I am named after my birth month.",
+	            "My full name forms a tongue twister. (sort of)",
+	            "I love dark chocolates.",
+	            "Cockroaches are the bane of my life.",
+	            "I love, adore, am crazy over (cute) kids. But I am not a peadophile..",
+	            "My favorite hawker food is popiah.",
+	            "Prof Ong and Prof TJS are my idols.",
+	            "I'm very pink.",
+	            "My family is in the food business, so yes, I love chinese fare."
+	    };
+
+	    // method to select and output 1 random fun fact
+	    String getFact() {
+
+	        // declare and initialize a String variable to store the fun fact
+	        String fact = "";
+
+	        // declare and initialize a randomNumberGenerator object
+	        Random randomNumberGenerator = new Random();
+	        // generate a random number in the range [0, mFacts.length-1]
+	        int randomNumber = randomNumberGenerator.nextInt(mFacts.length);
+
+	        // select the fact based on the random number generated
+	        fact = mFacts[randomNumber];
+
+	        return fact;
+	    }
+	}
+					</textarea>
+					<br><br><br>
+					
+					<b>AndroidManifest.xml</b>
 					<textarea  name="paragraph_text" cols="100" rows="20">
 	package nturep.funfacts;
 

@@ -51,6 +51,8 @@
 					<li class="submenu-item"><a href="code-funfacts-2.html">Create XML Layout</a></li>
 					<li class="submenu-item"><a href="code-funfacts-3.html">Implement Java Logic</a></li>
 					<li class="submenu-item"><a href="code-funfacts-4.html">Improve Code with OOP</a></li>
+					<br>
+					<li class="submenu-item"><a href="code-funfacts-5.html">Additional Android Features</a></li>
 				</ul>
 			</li>
 			<li><a class="selected" href="cheatsheet.html"><i class="icon-book icon-2x"></i><br/>Cheat Sheet</a></li>
@@ -75,25 +77,219 @@
 			
 
 			<!-- CONTENT BODY STARTS HERE-->
-
-			<h3 class="headline">
-			</h3>
 			<div class="container">
-				<p>
-				</p>
 				<br>
+				<div class="col-sm-8">
+					Let's use Java's OOP paradigm to better scale and organize our code.<br>We will be including a total of 12 different background colours and 10 fun facts in our app.
+					<br><br>
+					<h4>1. Create a new Java Class, <b>ColorWheel</b></h4>
+					This class will store all 12 background colors, and randomly select 1 color when its method is called
+					<br>
+					<img src="./includes/img/app4-1a.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<img src="./includes/img/app4-1b.png" style="width:300px; margin-top: 15px; border:1px solid #b7c0c7;">
+					<br><br><br>
+					<h4>2. Declare and initialize an array variable to store the colors</h4>
+					Create a <i>container</i> to store and organize the 10 colors, as below
+					<br><br>
+					<textarea  name="paragraph_text" cols="30" rows="10">
+	// the 12 hex color codes
+	"#39add1", // light blue
+	"#3079ab", // dark blue
+	"#c25975", // mauve
+	"#e15258", // red
+	"#f9845b", // orange
+	"#838cc7", // lavender
+	"#7d669e", // purple
+	"#53bbb4", // aqua
+	"#51b46d", // green
+	"#e0ab18", // mustard
+	"#637a91", // dark gray
+	"#f092b0", // pink</textarea>
+					<img src="./includes/img/app4-2.png" style="width:800px; margin-top: 15px; border:1px solid #b7c0c7;">
+					<br><br><br>
+					<h4>3. Program the method in <b>ColorWheel</b> class, <b>getColor()</b></h4>
+					This method selects and outputs a random color. Understand lines 23 - 39 and attempt to program it yourself
+					<br>
+					<img src="./includes/img/app4-3.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<br><br><br>
+					<h4>4. Do the same for the second Java Class, <b>FactBook</b></h4>
+					This class will store all 10 fun facts, and randomly select 1 fun fact when its method is called. Understand lines 7 - 36 and attempt to program it yourself (go on, insert 10 fun facts about yourself!)
+					<br>
+					<img src="./includes/img/app4-4.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<br><br><br>
+					<h4>5. Edit <b>FunFactsActivity</b> to make use of both Classes</h4>
+					Understand lines 31 - 33, 38 and 43, and attempt to program it yourself
+					<br>
+					<img src="./includes/img/app4-5.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<br><br>
+					Test run again with an Android device or an emulator.
+					<br><br><br><br>
+					Congratulations! You have completed the basic Android app tutorial :)
+					<br><br>
+					<div>
+						<button class="btn btn-main btn-large" onclick="location.href='cheatsheet.html'">Explore more Android features! <i class="icon-caret-right"></i></button>
+					</div>
+
+					<br><br>
+				</div>
 			</div>
 			<hr/> <!-- line break -->
-
-
-			<h3 class="headline">
-			</h3>
 			<div class="container">
-				<p>
-				</p>
-				<br>
+				<div class="col-sm-8">
+					<br><br>
+
+					<h4>Refer to or copy the following code if you encounter major bugs:</h4>
+					<br>
+
+					<b>ColorWheel.java</b>
+					<textarea  name="paragraph_text" cols="100" rows="20">
+	package nturep.funfacts;
+
+	import java.util.Random;
+
+	public class ColorWheel {
+
+	    // array variable to store the 10 hex color codes
+	    String mColors[] = {
+	            "#39add1", // light blue
+	            "#3079ab", // dark blue
+	            "#c25975", // mauve
+	            "#e15258", // red
+	            "#f9845b", // orange
+	            "#838cc7", // lavender
+	            "#7d669e", // purple
+	            "#53bbb4", // aqua
+	            "#51b46d", // green
+	            "#e0ab18", // mustard
+	            "#637a91", // dark gray
+	            "#f092b0", // pink
+	    };
+
+	    // method to select one color randomly
+	    String getColor() {
+
+	        // declare and initialize a String variable to store the color
+	        String colorString = "";
+
+	        // declare and initialize a random number generator object
+	        Random randomNumberGenerator = new Random();
+	        // call its method nextInt(x) to generate a random # in the range [0, (x-1)]
+	        int randomNumber = randomNumberGenerator.nextInt(12);
+
+	        // select random color from array given random number generated
+	        colorString = mColors[randomNumber];
+
+	        // output colorString
+	        return colorString;
+	    }
+
+	}
+					</textarea>
+					<br><br><br>
+					
+					<b>FactBook.java</b>
+					<textarea  name="paragraph_text" cols="100" rows="20">
+	package nturep.funfacts;
+
+	import java.util.Random;
+
+	public class FactBook {
+
+	    // array variable to store all 10 fun facts
+	    String[] mFacts = {
+	            "I used to have a dog and a cat living together.",
+	            "I am named after my birth month.",
+	            "My full name forms a tongue twister. (sort of)",
+	            "I love dark chocolates.",
+	            "Cockroaches are the bane of my life.",
+	            "I love, adore, am crazy over (cute) kids. But I am not a peadophile..",
+	            "My favorite hawker food is popiah.",
+	            "Prof Ong and Prof TJS are my idols.",
+	            "I'm very pink.",
+	            "My family is in the food business, so yes, I love chinese fare."
+	    };
+
+	    // method to select and output 1 random fun fact
+	    String getFact() {
+
+	        // declare and initialize a String variable to store the fun fact
+	        String fact = "";
+
+	        // declare and initialize a randomNumberGenerator object
+	        Random randomNumberGenerator = new Random();
+	        // generate a random number in the range [0, mFacts.length-1]
+	        int randomNumber = randomNumberGenerator.nextInt(mFacts.length);
+
+	        // select the fact based on the random number generated
+	        fact = mFacts[randomNumber];
+
+	        return fact;
+	    }
+	}
+					</textarea>
+					<br><br><br>
+					
+					<b>FunFactsActivity.java</b>
+					<textarea  name="paragraph_text" cols="100" rows="20">
+	package nturep.funfacts;
+
+	import android.app.Activity;
+	import android.graphics.Color;
+	import android.os.Bundle;
+	import android.view.View;
+	import android.widget.Button;
+	import android.widget.RelativeLayout;
+	import android.widget.TextView;
+
+
+	public class FunFactsActivity extends Activity {
+
+	    @Override
+	    protected void onCreate(Bundle savedInstanceState) {
+	        super.onCreate(savedInstanceState);
+	        setContentView(R.layout.activity_fun_facts);
+
+
+	        // create a Java buttonReference on the desired XML element in the layout
+	        Button buttonReference = (Button) findViewById(R.id.nextButton);
+
+	        // create the button listener object, and implement the desired onClick logic
+	        View.OnClickListener listenerReference = new View.OnClickListener() {
+
+	            @Override
+	            public void onClick(View view) {
+	                // the button was clicked, let's set some action to each click
+
+
+	                // declare and initialize a factBook and a colorWheel object
+	                FactBook factBook = new FactBook();
+	                ColorWheel colorWheel = new ColorWheel();
+
+	                // create a Java factReference on desired XML element in the layout
+	                TextView factReference = (TextView) findViewById(R.id.funFact);
+	                // change the funFact textView to display a new fact
+	                factReference.setText(factBook.getFact());
+
+	                // create a Java backgroundReference on desired XML element in the layout
+	                RelativeLayout backgroundReference = (RelativeLayout) findViewById(R.id.background);
+	                // translate the hexadecimal colorString into an int
+	                int colorID = Color.parseColor(colorWheel.getColor());
+	                // change the background Layout to a new color
+	                backgroundReference.setBackgroundColor(colorID);
+
+	            }
+	        };
+
+	        // attach listenerReference object created to buttonReference
+	        buttonReference.setOnClickListener(listenerReference);
+	    }
+	}
+					</textarea>
+
+
+					<br><br><br><br><br>
+				</div>
 			</div>
-			
 			
 			<!-- CONTENT BODY ENDS HERE-->
 			<!-- FOOTER STARTS HERE-->
