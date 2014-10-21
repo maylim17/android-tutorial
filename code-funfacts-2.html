@@ -76,70 +76,147 @@
 
 			<div class="container">
 				<br>
-				<p></p>
-				<br>
 				<div class="col-sm-8">
-					<h4>1. Create new project</h4>
-					Application name is the name of your app that appears on Google Play
+					<h4>1. Switch to <b>Design</b> tab at the bottom of the code editor window</h4>
+					This allows us to use the graphical editor to create our activity layout (XML file)
 					<br>
-					<img src="./includes/img/app1-1.png" style="width:600px; margin-top: 10px;">
+					<img src="./includes/img/app2-1.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
 					<br><br><br>
-					<h4>2. Specify form factor</h4>
-					Targeting older SDK/API versions can cater to more devices, but development would come with fewer features
+					<h4>2. Edit the "Hello world!" textView</h4>
+					Click the textView on the phone display and replace the text as below. You will get an error but it's okay
 					<br>
-					<img src="./includes/img/app1-2.png" style="width:600px; margin-top: 10px;">
+					<img src="./includes/img/app2-2.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
 					<br><br><br>
-					<h4>3. Select template for first activity</h4>
-					Let's start with a blank activity
+					<h4>3. Resolve the error with <b>strings.xml</b></h4>
+					Android's programming convention is to define all text values in a file called <b>strings.xml</b>. Navigate to the file in the project directory, and add the line as shown
 					<br>
-					<img src="./includes/img/app1-3.png" style="width:600px; margin-top: 10px;">
-					<br><br><br>
-					<h4>4. Identify your new activity</h4>
-					Activity name is the Java class name (the naming convention is _______Activity). Layout name is the XML file name. Title is the name displayed on the label of the user's screen.
-					<br>
-					<img src="./includes/img/app1-4.png" style="width:600px; margin-top: 10px;">
-					<br><br><br>
-					<h4>5. Wait for project's build to complete</h4>
-					After the project is built successfully, you will see the screen below<br>
-					&nbsp;&nbsp;&nbsp;- <b>Project directory</b>: to navigate between files in your project<br>
-					&nbsp;&nbsp;&nbsp;- <b>Code editor</b>: to edit your code<br>
-					&nbsp;&nbsp;&nbsp;- <b>XML display preview</b>: to view changes to the activity's XML file instantly<br>
-					&nbsp;&nbsp;&nbsp;- <b>Debugger</b>: to identify and debug code errors<br>
-					&nbsp;&nbsp;&nbsp;- <b>"Run" button</b>: to build and run the project as an app<br>
-					&nbsp;&nbsp;&nbsp;- <b>Highlighted files (FunFactsActivity and activity_fun_facts.xml)</b>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Java and XML files for this activity<br>
-					<br>
-					<img src="./includes/img/app1-5.png" style="width:600px; margin-top: 10px;">
-					<br><br><br>
-					<h4>6a. First test run by connecting Android device (method 1)</h4>
-					An empty shell is provided to the app at initial project creation, with just a "Hello world!" textView. Let's try running this app with an Android device (phone or tablet) connected to our computer via USB cable
+					<img src="./includes/img/app2-3.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<!-- <img src="./includes/img/app2-3a.png" style="width:200px; margin-top: 10px;">
+					<img src="./includes/img/app2-3b.png" style="width:700px; margin-top: 15px;"> -->
 					<br><br>
-					Click on the "Run" button > Select connected device > "OK"
-					<img src="./includes/img/app1-6a1.png" style="width:300px; margin-top: 10px;">
+					This lets us set all text values in one place, and the same text values can be referenced from multiple places.
 					<br><br>
-					If your device is not detected, <a href="http://developer.android.com/tools/device.html#developer-device-options" target="_blank">troubleshoot here</a> <br>
-					(On your device: open <i>Settings</i> > <i>Developer Options</i> > <i>enable USB debugging</i>)
-					<br><br><br>
-					<h4>6b. First test run by launching emulator (method 2)</h4>
-					An empty shell is provided to the app at initial project creation, with just a "Hello world!" textView. Let's try running this app with an Android Virtual Device (AVD) on our computer, i.e. an emulator
+					<img src="./includes/img/app2-3c.png" style="width:800px; margin-top: 15px; border:1px solid #b7c0c7;">
 					<br><br>
-					Click on the "Run" button > Click on "..." button as below to create a new emulator
-					<img src="./includes/img/app1-6b1.png" style="width:300px; margin-top: 10px;">
+					Switching to the <b>Text</b> tab, we see the XML code of our change made earlier (line 12).
 					<br><br><br>
-					Click on "Create.." > Fill in the specifications as below (tick "Use Host GPU")
-					<img src="./includes/img/app1-6b2.png" style="width:600px; margin-top: 10px;">
-					<br><br><br>
-					Select the new emulator from the drop-down list > "OK"
-					<img src="./includes/img/app1-6b3.png" style="width:300px; margin-top: 10px;">
-
-
-
+					<h4>4. Add a second textView to display our fun fact</h4>
+					Switch to the <b>Design</b> tab, select a <b>Plain TextView</b> under <b>Widgets</b>, drag and position it on the phone display
 					<br>
+					<img src="./includes/img/app2-4.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<br><br>
+					In the <b>Properties</b> window on the right, set id = "funFact", text = a fun fact about yourself, textSize = "24sp". Select the first textView ("Did you know?") and set textSize = "20sp".
+					<br><br><br>
+					<h4>5. Add a button that changes the fun fact displayed when clicked</h4>
+					In the <b>Design</b> tab, select a <b>Button</b> under <b>Widgets</b>, drag and position it on the phone display
+					<br>
+					<img src="./includes/img/app2-5.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<br><br>
+					In the <b>Properties</b> window on the right, set id = "nextButton", text = "Show Next Fun Fact", layout:width = "match_parent", layout:alignParent = [left, bottom], background = "#ffffff"
+					<br><br><br>
+					<h4>6. Change the background color of the activity</h4>
+					In the <b>Component Tree</b> window above <b>Properties</b>, select <b>RelativeLayout</b>, and change its background color to mauve, by setting background = "#c25975" to get the screen as below. Also set its id = "background"
+					<br>
+					<img src="./includes/img/app2-6.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<br><br><br>
+					<h4>7. Edit screen padding of our activity layout</h4>
+					Access the file <b>dimens.xml</b> to edit the layout dimensions as below
+					<br>
+					<img src="./includes/img/app2-7.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<br><br><br><br>
+
 					<div>
-						<button class="btn btn-main btn-large" id="button" onclick="showAnswers()">Show Answers</button><br><br><br>
 						<button class="btn btn-main btn-large" onclick="location.href='code-funfacts-3.html'">Next Step <i class="icon-caret-right"></i></button>
 					</div>
 
 					<br><br>
+				</div>
+			</div>
+			<hr/> <!-- line break -->
+			<div class="container">
+				<div class="col-sm-8">
+					<br><br>
+
+					<h4>Refer to or copy the following codes if you encounter major bugs:</h4>
+					<br>
+
+					<b>activity_fun_facts.xml</b>
+					<textarea  name="paragraph_text" cols="100" rows="20">
+
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:tools="http://schemas.android.com/tools"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:paddingRight="@dimen/activity_horizontal_margin"
+	    android:paddingTop="@dimen/activity_vertical_margin"
+	    android:paddingBottom="@dimen/activity_vertical_margin"
+	    tools:context=".FunFactsActivity"
+	    android:background="#c25975"
+	    android:id="@+id/background">
+
+	    <TextView
+	        android:text="@string/did_you_know"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/header"
+	        android:textSize="20sp" />
+
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="I am named after my birth month."
+	        android:id="@+id/funFact"
+	        android:layout_centerVertical="true"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentStart="true"
+	        android:textSize="24sp" />
+
+	    <Button
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="Show Next Fun Fact"
+	        android:id="@+id/nextButton"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentStart="true"
+	        android:background="#ffffff" />
+
+	</RelativeLayout>
+
+					</textarea>
+					<br><br><br>
+					
+					<b>strings.xml</b>
+					<textarea  name="paragraph_text" cols="100" rows="10">
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<resources>
+
+	    <string name="app_name">Fun Facts</string>
+	    <string name="hello_world">Hello world!</string>
+	    <string name="action_settings">Settings</string>
+
+	    <string name="did_you_know">Did you know?</string>
+
+	</resources>
+
+					</textarea>
+					<br><br><br>
+					
+					<b>dimens.xml</b>
+					<textarea  name="paragraph_text" cols="100" rows="10">
+
+
+	<resources>
+	    <!-- Default screen margins, per the Android Design guidelines. -->
+	    <dimen name="activity_horizontal_margin">50dp</dimen>
+	    <dimen name="activity_vertical_margin">50dp</dimen>
+	</resources>
+
+					</textarea>
+
+					<br><br><br><br><br>
 				</div>
 			</div>
 			

@@ -15,15 +15,6 @@
 		<link href="./includes/js/bxslider/jquery.bxslider.css" rel="stylesheet">
 		<link href="./includes/themes/default/style.css" rel="stylesheet">
 
-		<script>
-
-			// function showAnswers () {
-			// 	document.getElementById("answer-1").innerHTML = 'Declare a variable named school, with type String, and assign it a value of "NTU"<br><i>Ans: String school = "NTU";</i>'
-			// 	document.getElementById("answer-2").innerHTML = 'Declare an int variable named numStudents, and assign it a value of 12000<br><i>Ans: int numStudents = 12000;</i>';
-			// 	document.getElementById("answer-3").innerHTML = "Declare a method named announceResults, with return type void, and a String input argument <br><i>Ans: public void announceResults (String resultMessage) { }";
-			// }
-
-		</script>
 	</head>
 	<body>
 
@@ -87,36 +78,96 @@
 
 			<div class="container">
 				<br>
-				<p></p>
-				<br>
-				<div class="col-sm-4">
-
-<!-- 					<div class="form-group">
-						<label id="answer-1">Declare a variable named <i>school</i>, with type <i>String</i>, and assign it a value of <i>"NTU"</i></label>
-						<input name="name" class="form-control" value="" id="name" required="" type="text" placeholder="">
-					</div>
-
-					<div class="form-group">
-						<label id="answer-2">Declare an int variable named <i>numStudents</i>, and assign it a value of <i>12000</i></label>
-						<input name="name" class="form-control" value="" id="name" required="" type="text" placeholder="">
-					</div>
-
-					<div class="form-group">
-						<label id="answer-3">Declare a method named <i>announceResults</i>, with return type <i>void</i>, and a String input argument</label>
-						<input name="name" class="form-control" value="" id="name" required="" type="text" placeholder="">
-					</div> -->
-
+				<div class="col-sm-8">
+					<h4>1. Clean up the code in <b>FunFactsActivity.java</b></h4>
+					The methods <b>onCreateOptionsMenu</b> and <b>onOptionsItemSelected</b> (as highlighted) are used to configure the app's action bar. They aren't required here and can be removed for clarity
 					<br>
+					<img src="./includes/img/app3-1.png" style="width:800px; margin-top: 10px;">
+					<br><br><br>
+					<h4>2. Create a button listener on <b>nextButton</b></h4>
+					Understand lines 17 - 31 and attempt to programme it yourself. If you are prompted to import any class, do so
+					<br>
+					<img src="./includes/img/app3-2.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<br><br><br>
+					<h4>3. Implement the logic that runs when <b>nextButton</b> is clicked</h4>
+					Understand lines 31 - 41 and attempt to programme it yourself
+					<br>
+					<img src="./includes/img/app3-3.png" style="width:800px; margin-top: 10px; border:1px solid #b7c0c7;">
+					<br><br>
+					Test run again with an Android device or an emulator.
+					<br><br><br><br>
 					<div>
-						<button class="btn btn-main btn-large" id="button" onclick="showAnswers()">Show Answers</button><br><br><br>
 						<button class="btn btn-main btn-large" onclick="location.href='code-funfacts-4.html'">Next Step <i class="icon-caret-right"></i></button>
 					</div>
 
 					<br><br>
 				</div>
 			</div>
-			
-			
+			<hr/> <!-- line break -->
+			<div class="container">
+				<div class="col-sm-8">
+					<br><br>
+
+					<h4>Refer to or copy the following code if you encounter major bugs:</h4>
+					<br>
+
+					<b>FunFactsActivity.java</b>
+					<textarea  name="paragraph_text" cols="100" rows="20">
+	
+	package nturep.funfacts;
+
+	import android.app.Activity;
+	import android.graphics.Color;
+	import android.os.Bundle;
+	import android.view.View;
+	import android.widget.Button;
+	import android.widget.RelativeLayout;
+	import android.widget.TextView;
+
+
+	public class FunFactsActivity extends Activity {
+
+	    @Override
+	    protected void onCreate(Bundle savedInstanceState) {
+	        super.onCreate(savedInstanceState);
+	        setContentView(R.layout.activity_fun_facts);
+
+
+	        // create a Java buttonReference on the desired XML element in the layout
+	        Button buttonReference = (Button) findViewById(R.id.nextButton);
+
+	        // create the button listener object, and implement the desired onClick logic
+	        View.OnClickListener listenerReference = new View.OnClickListener() {
+
+	            @Override
+	            public void onClick(View view) {
+	                // the button was clicked, let's set some action to each click
+
+	                // create a Java factReference on desired XML element in the layout
+	                TextView factReference = (TextView) findViewById(R.id.funFact);
+	                // change the funFact textView to display a new fact
+	                factReference.setText("I used to have a dog and cat living together.");
+
+	                // create a Java backgroundReference on desired XML element in the layout
+	                RelativeLayout backgroundReference = (RelativeLayout) findViewById(R.id.background);
+	                // translate the hexadecimal color code into an int
+	                int colorID = Color.parseColor("#53bbb4");
+	                // change the background Layout to a new color
+	                backgroundReference.setBackgroundColor(colorID);
+
+	            }
+	        };
+
+	        // attach listenerReference object created to buttonReference
+	        buttonReference.setOnClickListener(listenerReference);
+	    }
+	}
+					</textarea>
+
+					<br><br><br><br><br>
+				</div>
+			</div>
+
 			<!-- CONTENT BODY ENDS HERE-->
 			<!-- FOOTER STARTS HERE-->
 
